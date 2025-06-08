@@ -1,0 +1,25 @@
+<main class="AMain">
+    <div class="Tittle">
+        <h1 class="TittleAnimation">Editar Producto</h1>
+    </div>
+    <div>
+        <form class="EditProductForm" action="/api/productos/actualizarProducto/{{producto._id}}" method="post">
+            {{#if mensaje}}   
+                <p style="color: red; font-weight: bold;">{{mensaje}}</p>  
+            {{/if}}
+            <div class="contactForm">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ producto.nombre }}" placeholder="Nombre del producto" required>
+            </div>
+            <div class="contactForm">
+                <input type="number" class="form-control" id="precio" name="precio" value="{{ producto.precio }}" placeholder="Precio" required>
+            </div>
+            <div class="contactForm">
+                <input type="text" class="form-control" id="imagen" name="imagen" value="{{ producto.imagen }}" placeholder="URL de la imagen" required>
+            </div>
+            <div class="contactForm">
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{ producto.descripcion }}" placeholder="Descripción del producto">
+            </div>
+            <button type="submit">Actualizar Producto</button>
+        </form>
+    </div>
+</main>

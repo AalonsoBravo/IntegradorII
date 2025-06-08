@@ -1,0 +1,39 @@
+<main class="AMain">
+    <h1 class="TittleAnimation">Lista de productos</h1>
+    <div>
+        <table class="tablaProductos">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each producto}}
+                    <tr>
+                        <td>{{_id}}</td>
+                        <td>{{ nombre }}</td>
+                        <td>${{ precio }}</td>
+                        <td>
+                            <img src="{{ imagen }}" alt="Imagen del producto">
+                        </td>
+                        <td>{{ descripcion }}</td>
+                        <td>
+                            <form action="/api/productos/verProducto/{{_id}}" method="get">
+                                <button class="btn-view" type="submit">Ver producto</button>
+                            </form>
+                            <form action="/api/productos/eliminarProducto/{{_id}}" method="post">
+                                <button class="btn-delete" type="submit">Eliminar producto</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <p class="mensaje" style="color:crimson;">{{mensaje}}</p>
+</main>

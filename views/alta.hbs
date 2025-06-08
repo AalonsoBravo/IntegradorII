@@ -1,0 +1,29 @@
+
+
+    <main class="AMain">
+        <div class="Tittle">
+            <h1 class="TittleAnimation">Add Product</h1>
+        </div>
+        <div>
+            <form class="AddProductForm" method="post" action="/api/productos/">
+                {{#if message}}   
+                    <p style="color: red; font-weight: bold;">
+                        {{mensaje}}
+                    </p>  
+                {{/if}}
+                <div class="contactForm">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del producto" aria-describedby="emailHelp" required>
+                </div>
+                <div class="contactForm">
+                    <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio" aria-describedby="emailHelp" required>
+                </div>
+                <div class="contactForm">
+                        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Imagen del producto" required>
+                </div>
+                <div class="contactForm">
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion del producto">
+                </div>
+                <button type="submit" class="btn btn-warning w-25">Guardar Producto</button>
+            </form>
+        </div>
+    </main>

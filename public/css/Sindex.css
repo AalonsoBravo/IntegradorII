@@ -1,0 +1,109 @@
+.IMain {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3%;
+    width: 15rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.Card-image figure {
+    overflow: hidden;
+}
+
+.Card-image img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s;
+}
+
+.Card-image:hover img {
+    transform: scale(1.2);
+}
+
+.CardCont {
+    margin-top: 1rem;
+}
+
+.CardCont h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.CardCont p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.25rem; 
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Tittle h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: .4rem;
+}
+
+.TittleAnimation {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

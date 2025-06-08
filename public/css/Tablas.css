@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(253,243,234);
+    color: black;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.tablaProductos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 14%;
+    max-height: 14%;
+    object-fit: contain;
+}
+

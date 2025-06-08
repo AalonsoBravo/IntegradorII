@@ -1,0 +1,32 @@
+<main class="AMain">
+<h1>
+    Usuarios registrados
+</h1>
+<div>
+    <ul>
+        {{#each usuarios}}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Mensaje</th>
+            </tr>
+            <tr>
+                <td>{{this._id}}</td>
+                <td>{{this.nombre}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mensaje}}</td>
+            </tr>
+            <form action = "/editaruser/{{this._id}}" method="post">
+                <button type="submit">Editar</button>
+            </form>
+        </table>
+        {{/each}}
+    </ul>
+</div>
+<h1 style="color: red;">
+    {{ mensaje }}
+</h1>
+
+</main>

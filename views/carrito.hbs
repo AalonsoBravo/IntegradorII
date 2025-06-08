@@ -1,0 +1,34 @@
+<main class="AMain">
+    <h1 class="TittleAnimation">Carrito de compras</h1>
+    {{#if mensaje}}
+        <p style="color:crimson;">{{mensaje}}</p>
+    {{/if}}
+    <table class="tablaProductos">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{this.productoId.nombre}}</td>
+                    <td>${{this.productoId.precio}}</td>
+                    <td>
+                        <img src="{{this.productoId.imagen}}" alt="Imagen del producto">
+                    </td>
+                    <td>{{this.cantidad}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <form action="/api/carrito/vaciarCarrito" method="post" style="margin-top: 20px;">
+        <button type="submit" class="btn btn-danger">Vaciar carrito</button>
+    </form>
+    <p style="color: crimson;">{{ mensaje }}</p>
+</main>

@@ -1,0 +1,27 @@
+        <div class="Contact">
+            <form method="POST" action="/api">
+                <div class="ContactForm">
+                    <input type="text" id="nombre" name="nombre" placeholder="Name" required pattern="[A-Za-z\s]{3,60}" title="Name must have only letters and spaces, and be between 3 and 60 characters long.">
+                </div>
+                <div class="ContactForm">
+                    <input type="email" id="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please, enter a valid email adress.">
+                </div>
+                <div class="contactForm">
+                    <input type="password" id="password" name="password" placeholder="Define a password" required pattern=".{6,}" title="Password must be at least 6 characters long.">
+                </div>
+                <div class="ContactForm">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Phone number" required pattern="[0-9]{10}" title="Please, enter a valid phone number.">
+                </div>
+                <div class="ContactForm">
+                    <textarea id="mensaje" name="mensaje" placeholder="Leave a message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+
+            <p style="color: red; font-weight: bold;">
+                {{mensaje}}
+            </p>
+            <div class="ContactForm">
+                <p>¿Already have an account? <a href="/login">Login</a></p>
+            </div>
+        </div>   
